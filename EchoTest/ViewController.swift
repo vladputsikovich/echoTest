@@ -2,6 +2,7 @@ import UIKit
 import AVFoundation
 import Vision
 import CropViewController
+import Photos
 
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     let session = AVCaptureSession()
@@ -177,6 +178,19 @@ extension ViewController: CropViewControllerDelegate {
 
     func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
         cropViewController.dismiss(animated: true)
+        
+        PHPhotoLibrary.shared().performChanges({
+            PHAssetChangeRequest.creationRequestForAsset(from: image)
+        }) { success, error in
+            if success {
+                print("Изображение успешно сохранено в фотоальбоме.")
+            } else if let error = error {
+                print("Ошибка при сохранении изображения: \(error.localizedDescription)")
+            } else {
+                print("Не удалось сохранить изображение.")
+            }
+        }
+        
         ImageUploadService().uploadImage(image) { result in
             switch result {
             case .success(let message):
