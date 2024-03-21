@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C03CFE5C892A2E00C46B8860 /* Pods_EchoTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E859034411C77A596C6E5556 /* Pods_EchoTest.framework */; };
 		ED915BB02BAAE7EC00CEDC8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED915BAF2BAAE7EC00CEDC8B /* AppDelegate.swift */; };
 		ED915BB22BAAE7EC00CEDC8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED915BB12BAAE7EC00CEDC8B /* SceneDelegate.swift */; };
 		ED915BB42BAAE7EC00CEDC8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED915BB32BAAE7EC00CEDC8B /* ViewController.swift */; };
 		ED915BB72BAAE7EC00CEDC8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED915BB52BAAE7EC00CEDC8B /* Main.storyboard */; };
 		ED915BB92BAAE7EF00CEDC8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED915BB82BAAE7EF00CEDC8B /* Assets.xcassets */; };
 		ED915BBC2BAAE7EF00CEDC8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED915BBA2BAAE7EF00CEDC8B /* LaunchScreen.storyboard */; };
+		EDA223BA2BAC2B22006015FC /* ImageUploadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA223B92BAC2B22006015FC /* ImageUploadService.swift */; };
+		EDA223BC2BAC4427006015FC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = EDA223BB2BAC4427006015FC /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33F185EAACC1F03FDB95505E /* Pods-EchoTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EchoTest.release.xcconfig"; path = "Target Support Files/Pods-EchoTest/Pods-EchoTest.release.xcconfig"; sourceTree = "<group>"; };
+		B6E58BAF3FD01306DA33C74F /* Pods-EchoTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EchoTest.debug.xcconfig"; path = "Target Support Files/Pods-EchoTest/Pods-EchoTest.debug.xcconfig"; sourceTree = "<group>"; };
+		E859034411C77A596C6E5556 /* Pods_EchoTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EchoTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED915BAC2BAAE7EC00CEDC8B /* EchoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EchoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED915BAF2BAAE7EC00CEDC8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED915BB12BAAE7EC00CEDC8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,8 @@
 		ED915BB82BAAE7EF00CEDC8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED915BBB2BAAE7EF00CEDC8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED915BBD2BAAE7EF00CEDC8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDA223B92BAC2B22006015FC /* ImageUploadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadService.swift; sourceTree = "<group>"; };
+		EDA223BB2BAC4427006015FC /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C03CFE5C892A2E00C46B8860 /* Pods_EchoTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8AF82C788DBCE455131828C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B6E58BAF3FD01306DA33C74F /* Pods-EchoTest.debug.xcconfig */,
+				33F185EAACC1F03FDB95505E /* Pods-EchoTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E095A5A0CE39ECC84B6B36F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E859034411C77A596C6E5556 /* Pods_EchoTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ED915BA32BAAE7EB00CEDC8B = {
 			isa = PBXGroup;
 			children = (
+				EDA223BB2BAC4427006015FC /* .gitignore */,
 				ED915BAE2BAAE7EC00CEDC8B /* EchoTest */,
 				ED915BAD2BAAE7EC00CEDC8B /* Products */,
+				8AF82C788DBCE455131828C5 /* Pods */,
+				E095A5A0CE39ECC84B6B36F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +92,7 @@
 				ED915BB82BAAE7EF00CEDC8B /* Assets.xcassets */,
 				ED915BBA2BAAE7EF00CEDC8B /* LaunchScreen.storyboard */,
 				ED915BBD2BAAE7EF00CEDC8B /* Info.plist */,
+				EDA223B92BAC2B22006015FC /* ImageUploadService.swift */,
 			);
 			path = EchoTest;
 			sourceTree = "<group>";
@@ -74,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED915BC02BAAE7EF00CEDC8B /* Build configuration list for PBXNativeTarget "EchoTest" */;
 			buildPhases = (
+				BB7ED83C9FF380330007E0B9 /* [CP] Check Pods Manifest.lock */,
 				ED915BA82BAAE7EB00CEDC8B /* Sources */,
 				ED915BA92BAAE7EB00CEDC8B /* Frameworks */,
 				ED915BAA2BAAE7EB00CEDC8B /* Resources */,
+				4339663B930FBC055BA611C7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDA223BC2BAC4427006015FC /* .gitignore in Resources */,
 				ED915BBC2BAAE7EF00CEDC8B /* LaunchScreen.storyboard in Resources */,
 				ED915BB92BAAE7EF00CEDC8B /* Assets.xcassets in Resources */,
 				ED915BB72BAAE7EC00CEDC8B /* Main.storyboard in Resources */,
@@ -133,11 +166,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4339663B930FBC055BA611C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EchoTest/Pods-EchoTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EchoTest/Pods-EchoTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EchoTest/Pods-EchoTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB7ED83C9FF380330007E0B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EchoTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ED915BA82BAAE7EB00CEDC8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDA223BA2BAC2B22006015FC /* ImageUploadService.swift in Sources */,
 				ED915BB42BAAE7EC00CEDC8B /* ViewController.swift in Sources */,
 				ED915BB02BAAE7EC00CEDC8B /* AppDelegate.swift in Sources */,
 				ED915BB22BAAE7EC00CEDC8B /* SceneDelegate.swift in Sources */,
@@ -282,6 +358,7 @@
 		};
 		ED915BC12BAAE7EF00CEDC8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6E58BAF3FD01306DA33C74F /* Pods-EchoTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,11 +367,14 @@
 				DEVELOPMENT_TEAM = DM8SQLY2K5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EchoTest/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Требуется доступ к камере для использования функций приложения.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Требуется доступ к фотобиблиотеке для добавления фотографий.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,6 +390,7 @@
 		};
 		ED915BC22BAAE7EF00CEDC8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33F185EAACC1F03FDB95505E /* Pods-EchoTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,11 +399,14 @@
 				DEVELOPMENT_TEAM = DM8SQLY2K5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EchoTest/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Требуется доступ к камере для использования функций приложения.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Требуется доступ к фотобиблиотеке для добавления фотографий.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
