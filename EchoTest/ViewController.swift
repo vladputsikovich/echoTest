@@ -10,6 +10,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     var isLookingStraight = false
     var photoOutput: AVCapturePhotoOutput?
     var previewLayer: AVCaptureVideoPreviewLayer?
+    private let activityIndicatorView = UIActivityIndicatorView(style: .large)
     
     private var captureButton = UIButton()
 
@@ -179,6 +180,8 @@ extension ViewController: CropViewControllerDelegate {
     func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
         cropViewController.dismiss(animated: true)
         
+        showLoadingIndicator()
+        
         PHPhotoLibrary.shared().performChanges({
             PHAssetChangeRequest.creationRequestForAsset(from: image)
         }) { success, error in
@@ -192,6 +195,7 @@ extension ViewController: CropViewControllerDelegate {
         }
         
         ImageUploadService().uploadImage(image) { result in
+            self.hideLoadingIndicator()
             switch result {
             case .success(let message):
                 print(message)
@@ -199,6 +203,17 @@ extension ViewController: CropViewControllerDelegate {
                 print(error)
             }
         }
+    }
+    
+    func showLoadingIndicator() {
+        activityIndicatorView.center = view.center
+        activityIndicatorView.startAnimating()
+        view.addSubview(activityIndicatorView)
+    }
+        
+    func hideLoadingIndicator() {
+        activityIndicatorView.stopAnimating()
+        activityIndicatorView.removeFromSuperview()
     }
 }
 
