@@ -2,7 +2,7 @@ import UIKit
 
 class ImageUploadService {
     func uploadImage(_ image: UIImage, completion: @escaping (Result<String, Error>) -> Void) {
-        guard let url = URL(string: "http://your-server-url.com/upload") else {
+        guard let url = URL(string: "") else {
             completion(.failure(ImageUploadError.invalidURL))
             return
         }
